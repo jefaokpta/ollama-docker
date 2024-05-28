@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-ollama start &
+ollama serve &
 sleep 15
 ollama run llama3
 sleep infinity

@@ -1,6 +1,3 @@
-FROM debian:12
-RUN apt-get update && apt-get install -y \
-    curl
-RUN curl -fsSL https://ollama.com/install.sh | sh
+FROM ollama/ollama
 COPY entrypoint.sh entrypoint.sh
-CMD ["sh", "entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/env", "bash", "entrypoint.sh"]

@@ -3,8 +3,6 @@ services:
     build: .
     volumes:
       - ./ollama:/root/.ollama
-    environment:
-      - OLLAMA_HOST=0.0.0.0
 
   veia-api:
     image: jefaokpta/veia-api:1.0
